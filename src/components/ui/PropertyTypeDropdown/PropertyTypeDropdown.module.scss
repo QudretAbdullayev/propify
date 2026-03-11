@@ -1,0 +1,112 @@
+.wrapper {
+    position: relative;
+    flex: 1;
+}
+
+.trigger {
+    width: 100%;
+    height: 100%;
+    padding: 14px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 13px;
+
+    &__label {
+        font-family: 'Inter', sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 28px;
+        color: #202020;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 140px;
+
+        &--active {
+            color: #9C530D;
+        }
+    }
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px;
+    width: 295px;
+    background: #F2F2F2;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+
+    &__tabs {
+        display: flex;
+        align-items: center;
+        padding: 4px;
+        gap: 0;
+        background: rgba(113, 113, 113, 0.12);
+        border-radius: 12px;
+
+        &__btn {
+            flex: 1;
+            padding: 4px;
+            border: none;
+            border-radius: 8px;
+            background: transparent;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            color: #000000;
+            cursor: pointer;
+            text-transform: capitalize;
+            transition: background 0.15s;
+
+            &--active {
+                background: #F2F2F2;
+            }
+        }
+    }
+
+    &__grid {
+        display: flex;
+        flex-direction: row;
+        padding: 12px;
+        gap: 54px;
+
+        &__col {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            flex: 1;
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+
+            &__checkbox {
+                width: 20px;
+                height: 20px;
+                flex-shrink: 0;
+                border: 1px solid rgba(66, 65, 67, 0.32);
+                border-radius: 4px;
+                cursor: pointer;
+                accent-color: #9C530D;
+            }
+
+            &__label {
+                font-family: 'Manrope', sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+                color: #000000;
+            }
+        }
+    }
+}

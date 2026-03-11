@@ -1,0 +1,155 @@
+@use '../../../assets/styles/abstracts' as *;
+
+.hero {
+    height: calc(100vh - 60rem);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+
+    &__bg {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        border-radius: 0 0 72rem 72rem;
+        z-index: -1;
+
+        video {
+            border-radius: 0;
+        }
+    }
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64));
+        pointer-events: none;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 64rem;
+        position: relative;
+        z-index: 3;
+    }
+
+    &__content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 16rem;
+        max-width: 639rem;
+
+        &__title {
+            @include font(72, 500, 72);
+            color: $white;
+        }
+
+        &__subtitle {
+            @include font(24, 400, 36);
+            color: rgba(217, 217, 217, 0.8);
+            max-width: 468rem;
+            margin: 0 auto;
+        }
+    }
+
+    &__search {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 608rem;
+
+        &__tabs {
+            display: flex;
+            padding: 0 16rem;
+            gap: 16rem;
+
+            &__btn {
+                padding: 12rem 28rem;
+                border-radius: 16rem 16rem 0 0;
+                @include font(18, 500, 28);
+                font-family: $font-secondary;
+                cursor: pointer;
+                border: none;
+                text-transform: capitalize;
+                background: rgba(85, 85, 85, 0.64);
+                color: #ffffff;
+                transition: background 0.2s, color 0.2s;
+
+                &--active {
+                    background: #ffffff;
+                    color: $black;
+                }
+            }
+        }
+
+        &__form {
+            background: #f2f2f2;
+            backdrop-filter: blur(2.5px);
+            border-radius: 16rem;
+            padding: 8rem;
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            &__field {
+                position: relative;
+                padding: 14rem;
+                border-radius: 13rem;
+                display: flex;
+                align-items: center;
+                flex: 1;
+                cursor: pointer;
+
+                &__label {
+                    @include font(18, 500, 28);
+                    font-family: $font-secondary;
+                    color: $black;
+                    white-space: nowrap;
+                    pointer-events: none;
+                }
+
+                &__select {
+                    position: absolute;
+                    inset: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    cursor: pointer;
+                    border: none;
+                    background: transparent;
+                }
+            }
+
+            &__divider {
+                width: 1rem;
+                height: 28rem;
+                background: rgba(113, 113, 113, 0.12);
+                flex-shrink: 0;
+            }
+
+            &__submit {
+                width: 52rem;
+                height: 52rem;
+                flex-shrink: 0;
+                background: linear-gradient(29.2deg, #541513 -3.19%, #8D5027 11.03%, #CB9552 64.34%, #FFF2DB 96.33%, #D7B189 138.98%, #AB6B2D 160.3%, #9C530D 167.41%);
+                border-radius: 16rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                cursor: pointer;
+                margin-left: 4rem;
+
+                &__icon {
+                    width: 24rem;
+                    height: 24rem;
+                    display: block;
+                }
+            }
+        }
+    }
+}

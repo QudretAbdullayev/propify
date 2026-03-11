@@ -9,7 +9,7 @@ import SafeLink from '../../SafeLink/SafeLink';
 import Left from '../../../assets/icons/Left';
 import Right from '../../../assets/icons/Right';
 
-export default function FeaturedProjects({ properties, title, seeAllLink = '/properties', seeAllText }) {
+export default function FeaturedProjects({ properties, title, seeAllLink = '/properties', seeAllText, ctaText }) {
     const t = useTranslations('HomePage');
     const swiperRef = useRef(null);
 
@@ -37,6 +37,8 @@ export default function FeaturedProjects({ properties, title, seeAllLink = '/pro
                                     title={prop.title}
                                     price={prop.price}
                                     isAED={prop.isAED}
+                                    ctaText={ctaText}
+                                    ctaHref={prop.href}
                                 />
                             </SwiperSlide>
                         ))}

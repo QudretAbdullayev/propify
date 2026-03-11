@@ -2,8 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./PropertyCard.module.scss";
 import SafeLink from "@/components/SafeLink/SafeLink";
+import ChevronRight from "@/assets/icons/ChevronRight";
 
-export default function PropertyCard({ image, date, title, price, isAED }) {
+export default function PropertyCard({ image, date, title, price, isAED, ctaText = "See details", ctaHref }) {
+  const href = ctaHref ?? `/property/${title.replace(/\s+/g, "-").toLowerCase()}`;
   return (
     <div className={styles.card}>
       <div className={styles.card__imageBox}>
@@ -32,12 +34,9 @@ export default function PropertyCard({ image, date, title, price, isAED }) {
           )}
         </div>
         <div className={styles.card__content__footer}>
-          <SafeLink
-            href={`/property/${title.replace(/\s+/g, "-").toLowerCase()}`}
-            className={styles.card__content__footer__btn}
-          >
-            See details
-            <span className={styles.card__content__footer__btn__icon}></span>
+          <SafeLink href={href} className={styles.card__content__footer__btn}>
+            {ctaText}
+            <ChevronRight className={styles.card__content__footer__btn__icon} />
           </SafeLink>
         </div>
       </div>
