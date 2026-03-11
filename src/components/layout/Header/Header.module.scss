@@ -1,0 +1,51 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixins';
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 48rem 108rem;
+    margin: 0 auto;
+    z-index: 10;
+
+    &__container {
+        @include flex-between();
+
+        &__logo {
+            width: 86rem;
+            height: 86rem;
+            @include flex-center();
+
+            &__img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        &__actions {
+            display: flex;
+            align-items: center;
+            gap: 32rem;
+
+            &__lang {
+                @include font(18, 400, 24);
+                color: $white;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 4rem;
+            }
+
+            &__menu {
+                &__icon {
+                    width: 40rem;
+                    height: 40rem;
+                    color: #F2F2F2;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,118 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixins';
+
+.card {
+    width: 600rem;
+    height: 704rem;
+    background: $white;
+    border-radius: 32rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    &__imageBox {
+        width: 100%;
+        height: 400rem;
+        position: relative;
+        border-radius: 32rem;
+        overflow: hidden;
+
+        &__img {
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        padding: 32rem 24rem 36rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+        gap: 48rem;
+
+        &__header {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+
+            &__date {
+                @include font(16, 600, 24);
+                color: rgba(32, 32, 32, 0.82);
+            }
+
+            &__title {
+                @include font(32, 400, 48);
+                color: $black;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        &__footer {
+            display: flex;
+            align-items: flex-end;
+            width: 100%;
+            justify-content: flex-end;
+            /* right-aligned button if no price */
+
+            &__priceBlock {
+                display: flex;
+                align-items: center;
+                gap: 12rem;
+                margin-right: auto; // push see details to right
+                min-width: 0;
+                overflow: hidden;
+
+                &__label {
+                    background: linear-gradient(29.2deg, #541513 -3.19%, #8D5027 11.03%, #CB9552 64.34%, #FFF2DB 96.33%, #D7B189 138.98%, #AB6B2D 160.3%, #9C530D 167.41%);
+                    border-radius: 8rem;
+                    padding: 4rem 12rem;
+                    @include font(20, 400, 28);
+                    color: $white;
+                }
+
+                &__amount {
+                    @include font(36, 500, 44);
+                    letter-spacing: -1rem;
+                    color: $black;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    min-width: 0;
+                }
+            }
+
+            &__btn {
+                background: $black;
+                backdrop-filter: blur(2.5rem);
+                border-radius: 20rem;
+                padding: 20rem 32rem;
+                display: flex;
+                align-items: center;
+                gap: 8rem;
+                @include font(17.7, 700, 23);
+                color: $white;
+
+                &__icon {
+                    width: 24rem;
+                    height: 24rem;
+                    border-radius: 50%;
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 16rem;
+                        height: 16rem;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23FFFFFF'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 5l7 7-7 7'%3E%3C/path%3E%3C/svg%3E");
+                        background-size: cover;
+                    }
+                }
+            }
+        }
+    }
+}

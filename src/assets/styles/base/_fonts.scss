@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+//Italic fonts
+
+@font-face {
+    font-family: "Suisse Intl";
+    font-weight: 600;
+    font-style: italic;
+    src: url("/fonts/SuisseIntl-SemiBoldItalic.otf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Suisse Intl";
+    font-weight: 700;
+    font-style: italic;
+    src: url("/fonts/SuisseIntl-SemiBoldItalic.otf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Suisse Intl";
+    font-weight: 900;
+    font-style: italic;
+    src: url("/fonts/SuisseIntl-BlackItalic.otf") format("truetype");
+    font-display: swap;
+}

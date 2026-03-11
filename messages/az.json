@@ -1,0 +1,41 @@
+{
+    "HomePage": {
+        "title": "Lüksün İmkanlarla Buluştuğu Yerde Yaşayın",
+        "subtitle": "Modern yatırımcılar için özenle seçilmiş, Dubai'nin en iyi evlerine özel erişim.",
+        "search": {
+            "buy": "Satın Al",
+            "rent": "Kira",
+            "offPlan": "Projeden",
+            "propertyType": "Emlak Tipi",
+            "area": "Bölge",
+            "bedrooms": "Yatak Odası",
+            "priceRange": "Fiyat Aralığı"
+        },
+        "featuredProjects": "Öne Çıkan Projeler",
+        "seeAllProperties": "Tüm emlakları gör",
+        "aboutUs": {
+            "title": "Hakkımızda",
+            "description": "Propify, Dubai merkezli butik bir gayrimenkul danışmanlık firmasıdır...",
+            "readMore": "Daha fazla oku",
+            "poweredBy": "50+ geliştirici tarafından desteklenmektedir"
+        },
+        "secondaryProperties": "İkinci El Emlaklar",
+        "seeAllUnits": "Tüm üniteleri gör",
+        "marketOverview": {
+            "title": "Dubai Gayrimenkul Piyasa İncelemesi",
+            "date": "Ocak, 2026",
+            "salesVolume": "Satış Hacmi",
+            "salesValue": "Satış Değeri",
+            "apartments": "Daireler",
+            "mom": "Aylık",
+            "yoy": "Yıllık"
+        },
+        "latestOffPlan": "En Son Projeler",
+        "seeAllProjects": "Tüm projeler",
+        "testimonials": "Müşteri Yorumları",
+        "newsCenter": "Haber Merkezi",
+        "seeAllArticles": "Tüm haberler",
+        "investmentQuiz": "Yatırım Testi",
+        "purchaseEnquiry": "Satın Alma Talebi"
+    }
+}

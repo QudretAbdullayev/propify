@@ -1,0 +1,41 @@
+{
+    "HomePage": {
+        "title": "Live Where Luxury Meets Possibility",
+        "subtitle": "Exclusive access to Dubai’s finest homes, curated for the modern investor.",
+        "search": {
+            "buy": "Buy",
+            "rent": "Rent",
+            "offPlan": "Off-plan",
+            "propertyType": "Property type",
+            "area": "Area",
+            "bedrooms": "Bedrooms",
+            "priceRange": "Price range"
+        },
+        "featuredProjects": "Featured projects",
+        "seeAllProperties": "See all properties",
+        "aboutUs": {
+            "title": "About us",
+            "description": "Propify is a boutique real estate advisory firm based in Dubai, primarily serving investors from the CIS, South Asia, and the UAE.\\n\\nPropify combines local market expertise with international investor strategies. We is not just an operational broker, we are a strategic partner guiding investors to make intelligent, informed decisions.",
+            "readMore": "Read more",
+            "poweredBy": "Powered by 50+ developers"
+        },
+        "secondaryProperties": "Secondary properties",
+        "seeAllUnits": "See all units",
+        "marketOverview": {
+            "title": "dubai real estate market overview",
+            "date": "January, 2026",
+            "salesVolume": "Sales volume",
+            "salesValue": "Sales value",
+            "apartments": "Apartments",
+            "mom": "MoM",
+            "yoy": "YoY"
+        },
+        "latestOffPlan": "Latest off-plan projects",
+        "seeAllProjects": "See all projects",
+        "testimonials": "Testimonials",
+        "newsCenter": "News center",
+        "seeAllArticles": "See all articles",
+        "investmentQuiz": "Investment quiz",
+        "purchaseEnquiry": "Purchase enquiry"
+    }
+}
