@@ -9,7 +9,7 @@ import SafeLink from '../../SafeLink/SafeLink';
 import Left from '../../../assets/icons/Left';
 import Right from '../../../assets/icons/Right';
 
-export default function FeaturedProjects({ properties }) {
+export default function FeaturedProjects({ properties, title, seeAllLink = '/properties', seeAllText }) {
     const t = useTranslations('HomePage');
     const swiperRef = useRef(null);
 
@@ -17,9 +17,9 @@ export default function FeaturedProjects({ properties }) {
         <section className={styles.featured}>
             <div className={styles.featured__main}>
                 <div className={styles.featured__header}>
-                    <h2 className={styles.featured__header__title}>{t('featuredProjects')}</h2>
-                    <SafeLink href="/properties" className={styles.featured__header__link}>
-                        {t('seeAllProperties')}
+                    <h2 className={styles.featured__header__title}>{title ?? t('featuredProjects')}</h2>
+                    <SafeLink href={seeAllLink} className={styles.featured__header__link}>
+                        {seeAllText ?? t('seeAllProperties')}
                         <span />
                     </SafeLink>
                 </div>
@@ -35,6 +35,8 @@ export default function FeaturedProjects({ properties }) {
                                     image={prop.image}
                                     date={prop.date}
                                     title={prop.title}
+                                    price={prop.price}
+                                    isAED={prop.isAED}
                                 />
                             </SwiperSlide>
                         ))}

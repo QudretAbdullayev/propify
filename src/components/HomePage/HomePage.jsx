@@ -39,6 +39,49 @@ const mockProperties = [
   },
 ];
 
+const secondaryMockProperties = [
+  {
+    id: 1,
+    title: "Jumeirah Residences Emirates Towers",
+    date: "August 7, 2023",
+    image: "/home/0b0c8d1471b5f46b14755075c0e185ba33f5f9c2.png",
+    price: "1.1M",
+    isAED: false,
+  },
+  {
+    id: 2,
+    title: "Expo Living by Emaar",
+    date: "August 7, 2023",
+    image: "/home/10a2301a22641591e03e7f7c1bd201d9a8157e8c.png",
+    price: "720 000",
+    isAED: true,
+  },
+  {
+    id: 3,
+    title: "Mina Al Arab",
+    date: "August 7, 2023",
+    image: "/home/22260f7191dd16be582f7c403b42e7ed39dd9cfe.png",
+    price: "720 000",
+    isAED: true,
+  },
+  {
+    id: 4,
+    title: "Expo Living by Emaar",
+    date: "August 7, 2023",
+    image: "/home/27c07a7521f6bd3c2ea8333f29837294ba4264c4.png",
+    price: "720 000",
+    isAED: true,
+  },
+  {
+    id: 5,
+    title: "Jumeirah Residences Emirates Towers",
+    date: "August 7, 2023",
+    image: "/home/0b0c8d1471b5f46b14755075c0e185ba33f5f9c2.png",
+    price: "1.1M",
+    isAED: false,
+  },
+];
+
 export default function HomePage() {
   const t = useTranslations("HomePage");
   const [activeTab, setActiveTab] = useState("rent");
@@ -227,25 +270,26 @@ export default function HomePage() {
         </div>
       </section>
       <PartnersMarquee />
+      <FeaturedProjects
+        properties={secondaryMockProperties}
+        title="Secondary properties"
+        seeAllLink="/properties"
+        seeAllText="See all units"
+      />
       <MarketOverview />
-
-      {/* Latest off-plan projects (Simulated using existing swiper approach) */}
-      {/* <section className={styles.home__featured}>
-                <div className="g-container">
-                    <SectionHeader title={t('latestOffPlan')} linkText={t('seeAllProjects')} linkHref="/projects" />
-                    <div className={styles.home__featured__slider}>
-                        <Swiper modules={[Navigation]} spaceBetween={32} slidesPerView={2.4} navigation>
-                            {mockProperties.map((prop) => (
-                                <SwiperSlide key={prop.id}>
-                                    <PropertyCard image={prop.image} date={prop.date} title={prop.title} isAED={true} />
-                                </SwiperSlide>
-                            ))}
-                        </Swiper>
-                    </div>
-                </div>
-            </section> */}
-            
+      <FeaturedProjects
+        properties={secondaryMockProperties}
+        title="Last oLatest off-plan projects"
+        seeAllLink="/off-plan"
+        seeAllText="See all projects"
+      />
       <Testimonials />
+      <FeaturedProjects
+        properties={secondaryMockProperties}
+        title="News center"
+        seeAllLink="/news"
+        seeAllText="See all articles"
+      />
     </div>
   );
 }

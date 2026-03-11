@@ -1,5 +1,4 @@
-@import '../../../assets/styles/variables';
-@import '../../../assets/styles/mixins';
+@use '@/assets/styles/abstracts/' as *;
 
 .featured {
     display: flex;
@@ -45,7 +44,6 @@
 
     &__slider {
         width: 100%;
-        height: 704rem;
 
         :global(.swiper) {
             overflow: visible;

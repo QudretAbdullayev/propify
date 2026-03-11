@@ -1,7 +1,19 @@
-@mixin font($value: 16, $weight: 400, $line-height: inherit) {
-  font-size: $value+rem;
-  font-weight: $weight;
-  line-height: $line-height+rem;
+@mixin font($size, $weight, $lineHeight) {
+    font-size: #{$size}rem;
+    font-weight: $weight;
+    line-height: #{$lineHeight}rem;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 @mixin fadeIn($time: 0.3s) {
